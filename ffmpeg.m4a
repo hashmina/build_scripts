@@ -1,0 +1,1 @@
+find . -iname "*.flac" -exec sh -c "ffmpeg -i '{}' -f wav - | neroAacEnc -ignorelength -if - -q 1 -of '{}'.m4a" \;
